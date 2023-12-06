@@ -5,7 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/app.css" />
     <link rel="icon" href="images/fav-icon.png" type="image/png" />
+
     <title>coffee shop</title>
+    <script type="text/javascript">
+      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
   </head>
   <body class="font-Dana bg-gray-100 dark:bg-zinc-800">
     <!--All SVG ICON-->
@@ -67,6 +80,20 @@
           d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75"
         />
       </symbol>
+      <symbol
+        id="chevron-left"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M15.75 19.5L8.25 12l7.5-7.5"
+        />
+      </symbol>
     </svg>
     <!--All SVG ICON-->
     <header
@@ -89,7 +116,7 @@
               <a href="#">فروشگاه</a>
               <!--sub menu-->
               <div
-                class="absolute top-full opacity-0 invisible group-hover:opacity-100 group-hover:visible p-6 space-y-4 w-52 text-zinc-700 text-base dark:text-white bg-white dark:bg-zinc-700 rounded-2xl border-t-[3px] shadow-none border-t-orange-300 tracking-normal child:block transition-all child:transition-colors child-hover:text-orange-300"
+                class="absolute top-full opacity-0 invisible group-hover:opacity-100 group-hover:visible p-6 space-y-4 w-52 text-zinc-700 text-base dark:text-white bg-white dark:bg-zinc-700 rounded-2xl border-t-[3px] shadow-none border-t-orange-300 tracking-normal child:inline-block transition-all child:transition-colors child-hover:text-orange-300"
               >
                 <a href="#">قهوه ویژه</a>
                 <a href="#">ویژه در سطح جهانی</a>
@@ -110,14 +137,41 @@
         <div class="flex text-orange-200 text-xl">
           <div class="flex gap-x-5 items-center">
             <!--card icon-->
-            <div>
-              <svg class="w-8 h-8">
-                <use xlink:href="#shopping-cart"></use>
-              </svg>
+            <div class="relative group cursor-pointer">
+              <div class="py-3">
+                <svg class="w-8 h-8">
+                  <use href="#shopping-cart"></use>
+                </svg>
+              </div>
+              <!--card box-->
+              <div
+                class="absolute top-full left-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible p-5 space-y-4 w-[400px] text-zinc-700 text-base dark:text-white bg-white dark:bg-zinc-700 rounded-2xl border-t-[3px] shadow-none border-t-orange-300 tracking-normal transition-all child:transition-colors child-hover:text-orange-300"
+              >
+                <div class="flex items-center justify-between">
+                  <span
+                    class="text-gray-300 font-DanaMedium text-xs tracking-tightest"
+                    >4 مورد</span
+                  >
+                  <a
+                    href="#"
+                    class="flex items-center tracking-tighter text-orange-300"
+                  >
+                    مشاهده سبد خرید
+                    <svg class="w-4 h-4">
+                      <use href="#chevron-left"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
             </div>
             <!--Theme switch btn-->
-            <div>
-              <svg class="w-8 h-8"><use xlink:href="#moon"></use></svg>
+            <div class="cursor-pointer" id="toggle-theme">
+              <svg class="block dark:hidden w-8 h-8">
+                <use href="#moon"></use>
+              </svg>
+              <svg class="dark:block hidden w-8 h-8">
+                <use href="#sun"></use>
+              </svg>
             </div>
           </div>
           <!--divide Border-->
@@ -125,7 +179,7 @@
           <!--Register-->
           <a href="#" class="flex items-center gap-x-2.5">
             <svg class="w-8 h-8 rotate-180">
-              <use xlink:href="#arrow-left-on-rectangle"></use>
+              <use href="#arrow-left-on-rectangle"></use>
             </svg>
             <span> ورود | ثبت نام</span>
           </a>
