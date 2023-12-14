@@ -116,7 +116,7 @@
               <a href="#">فروشگاه</a>
               <!--sub menu-->
               <div
-                class="absolute top-full opacity-0 invisible group-hover:opacity-100 group-hover:visible p-6 space-y-4 w-52 text-zinc-700 text-base dark:text-white bg-white dark:bg-zinc-700 rounded-2xl border-t-[3px] shadow-none border-t-orange-300 tracking-normal child:inline-block transition-all child:transition-colors child-hover:text-orange-300"
+                class="absolute top-full opacity-0 invisible group-hover:opacity-100 group-hover:visible p-6 space-y-4 w-52 text-zinc-700 text-base dark:text-white bg-white dark:bg-zinc-700 rounded-2xl border-t-[3px] shadow-none border-t-orange-300 tracking-normal child:inline-block transition-all delay-75 child:transition-colors child-hover:text-orange-300"
               >
                 <a href="#">قهوه ویژه</a>
                 <a href="#">ویژه در سطح جهانی</a>
@@ -145,9 +145,10 @@
               </div>
               <!--card box-->
               <div
-                class="absolute top-full left-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible p-5 space-y-4 w-[400px] text-zinc-700 text-base dark:text-white bg-white dark:bg-zinc-700 rounded-2xl border-t-[3px] shadow-none border-t-orange-300 tracking-normal transition-all child:transition-colors child-hover:text-orange-300"
+                class="absolute top-full left-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible p-5 space-y-4 w-[400px] text-zinc-700 text-base dark:text-white bg-white dark:bg-zinc-700 rounded-2xl border-t-[3px] shadow-none border-t-orange-300 tracking-normal transition-all child:transition-colors delay-75"
               >
-                <div class="flex items-center justify-between">
+                <!--card header-->
+                <div class="flex items-center font-DanaMedium justify-between">
                   <span
                     class="text-gray-300 font-DanaMedium text-xs tracking-tightest"
                     >4 مورد</span
@@ -161,6 +162,85 @@
                       <use href="#chevron-left"></use>
                     </svg>
                   </a>
+                </div>
+                <!--card body-->
+                <div
+                  class="pb-1 border-b border-b-gray-300 dark:border-b-white/10 divide-y divide-gray-200 dark:divide-white/10 child:py-5"
+                >
+                  <!--card item-1-->
+                  <div class="flex gap-x-2.5">
+                    <img
+                      src="./images/products/p1.png"
+                      alt="product1"
+                      class="h-30 w-30"
+                    />
+                    <div class="flex flex-col justify-between">
+                      <h4
+                        class="font-DanaMedium text-zinc-700 text-base dark:text-white line-clamp-2"
+                      >
+                        قهوه اسپرسو بن مانو مدل پریسکا 250 گرمی
+                      </h4>
+                      <div>
+                        <span
+                          class="text-teal-600 dark:text-emerald-500 text-sm tracking-tighter"
+                          >14,500 تومان تخفیف</span
+                        >
+                        <div
+                          class="text-zinc-700 dark:text-white font-DanaDemiBold"
+                        >
+                          175,000
+                          <span class="font-Dana text-sm">تومان</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--card item-2-->
+                  <div class="flex gap-x-2.5">
+                    <img
+                      src="./images/products/p2.png"
+                      alt="product1"
+                      class="h-30 w-30"
+                    />
+                    <div class="flex flex-col justify-between">
+                      <h4
+                        class="font-DanaMedium text-zinc-700 text-base dark:text-white line-clamp-2"
+                      >
+                        قهوه اسپرسو بن مانو مدل پریسکا 250 گرمی
+                      </h4>
+                      <div>
+                        <span
+                          class="text-teal-600 dark:text-emerald-500 text-sm tracking-tighter"
+                          >14,500 تومان تخفیف</span
+                        >
+                        <div
+                          class="text-zinc-700 dark:text-white font-DanaDemiBold"
+                        >
+                          175,000
+                          <span class="font-Dana text-sm">تومان</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--card footer-->
+                <div class="flex items-center justify-between mt-5">
+                  <div>
+                    <span
+                      class="tracking-tighter text-xs font-DanaMedium text-gray-300"
+                      >مبلغ قابل پرداخت</span
+                    >
+                    <div
+                      class="text-zinc-700 dark:text-white font-DanaDemiBold"
+                    >
+                      350,000
+                      <span class="font-Dana text-sm">تومان</span>
+                    </div>
+                  </div>
+                  <a
+                    href="#"
+                    class="flex items-center justify-center h-14 w-[144px] rounded-xl tracking-tighter bg-teal-600 dark:bg-emerald-500 text-white transition-colors hover:bg-teal-700 dark:hover:bg-emerald-600"
+                    >ثبت سفارش</a
+                  >
                 </div>
               </div>
             </div>
