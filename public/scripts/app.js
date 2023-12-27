@@ -4,6 +4,11 @@ const submenu = document.querySelector(".submenu");
 const navOpenIcon = document.querySelector(".nav-icon");
 const nav = document.querySelector(".nav");
 const navCloseIcon = document.querySelector(".close-nav");
+
+const cartOpernBTN = document.querySelector(".cart-icon");
+const cartSession = document.querySelector(".cart-session");
+const cartCloseIcon = document.querySelector(".close-cart");
+
 const overlay = document.querySelector(".overlay");
 
 toggleThemeBtns.forEach((btn) => {
@@ -33,4 +38,16 @@ navCloseIcon.addEventListener("click", () => {
   overlay.classList.add("hidden");
   nav.classList.add("-right-64");
   nav.classList.remove("right-0");
+});
+
+cartOpernBTN.addEventListener("click", function () {
+  overlay.classList.remove("hidden");
+  cartSession.classList.add("left-0");
+  cartSession.classList.remove("-left-64");
+});
+
+cartCloseIcon.addEventListener("click", () => {
+  overlay.classList.add("hidden");
+  cartSession.classList.add("-left-64");
+  cartSession.classList.remove("left-0");
 });
