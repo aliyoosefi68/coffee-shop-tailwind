@@ -65,9 +65,20 @@
     position: relative;
     color: #fdba74;
   }
-}
 
-body {
-  background-image: url("../images/headerBgDesktop.webp");
-  background-repeat: no-repeat;
+  .circle {
+    @apply hidden md:flex items-center justify-center border  rounded-full;
+  }
+  .circle--main {
+    @apply absolute bottom-0 left-0 right-0 mx-auto translate-y-1/2;
+  }
+  .circle--lg {
+    @apply w-[203px] h-[203px] border-white/25;
+  }
+  .circle--md {
+    @apply w-[145px] h-[145px] border-white/50;
+  }
+  .circle--sm {
+    @apply w-[95px] h-[95px] border-white/80;
+  }
 }

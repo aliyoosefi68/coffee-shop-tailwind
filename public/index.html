@@ -20,7 +20,7 @@
       }
     </script>
   </head>
-  <body class="font-Dana bg-gray-100 dark:bg-zinc-800">
+  <body class="font-Dana bg-gray-100 dark:bg-zinc-800 h-[2000px]">
     <!--All SVG ICON-->
     <svg class="hidden">
       <symbol
@@ -292,10 +292,25 @@
           d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
         />
       </symbol>
+      <symbol
+        id="curve"
+        width="100"
+        height="22"
+        viewBox="0 0 100 22"
+        fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M50 0C69 0 81 22 100 22L0 22C18.75 22 31 0 50 0Z" />
+      </symbol>
+
+      <symbol id="mini-chevron-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"">
+        <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+      </symbol>
+      
     </svg>
     <!--All SVG ICON-->
     <header
-      class="fixed top-9 right-0 left-0 hidden md:flex bg-black/50 w-[98%] lg:w-[90%] mx-auto px-5 lg:px-10 py-5 h-24 rounded-3xl items-center backdrop-blur-[6px]"
+      class="fixed top-9 right-0 left-0 z-50 hidden md:flex bg-black/50 w-[98%] lg:w-[90%] mx-auto px-5 lg:px-10 py-5 h-24 rounded-3xl items-center backdrop-blur-[6px]"
     >
       <div class="flex w-full justify-between items-center">
         <!--logo and Menu-->
@@ -718,6 +733,55 @@
         </div>
       </div>
     </div>
+
+    <!--=========================================main content==================================-->
+    <main>
+      <section
+        class="home relative h-[200px] xs:h-auto xs:aspect-[2/1] md:aspect-auto bg-home-mobile md:bg-home-desktop bg-no-repeat bg-cover bg-[center_top]"
+      >
+        <div
+          class="container relative overflow-y-hidden h-full flex md:min-h-screen justify-end items-center"
+        >
+          <div class="text-white">
+            <h2 class="font-MorabbaBold text-2xl md:text-6xl mb-0.5 md:mb-2">
+              قهوه عربیکا تانزانیا
+            </h2>
+            <span class="font-MorabbaLight text-xl md:text-5xl"
+              >یک فنجان بالانس!</span
+            >
+            <span
+              class="block w-[100px] h-px md:h-0.5 bg-orange-300 my-3 md:my-8"
+            ></span>
+            <p class="text-xs md:text-2xl max-w-[201px] md:max-w-[460px]">
+              قطعا نام آشنای عربیکا را شنیده اید، عربیکا یکی از گونه های قهوه
+              است که در نواحی مختلف کمربند قهوه کشت میشود.
+            </p>
+          </div>
+          <!--circles-->
+          <div class="circle circle--main circle--lg">
+            <div class="circle circle--md">
+              <div class="circle circle--sm"></div>
+            </div>
+          </div>
+        </div>
+
+        <!--curve svg-->
+        <svg
+          class="absolute hidden md:block text-gray-100 dark:text-zinc-800 w-[100px] h-[22px] bottom-0 right-0 left-0 mx-auto"
+        >
+          <use href=" #curve"></use>
+        </svg>
+
+        <!--Arrow top-->
+        <div
+          class="absolute left-0 right-0 translate-y-[-50%] mx-auto hidden md:flex items-center justify-center w-[30px] h-[30px] border-2 border-orange-300 rounded-full"
+        >
+          <svg class="w-5 h-5 text-zinc-700 dark:text-white">
+            <use href="#mini-chevron-down"></use>
+          </svg>
+        </div>
+      </section>
+    </main>
 
     <!--overlay for mobile view-->
     <div
