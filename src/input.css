@@ -81,4 +81,31 @@
   .circle--sm {
     @apply w-[95px] h-[95px] border-white/80;
   }
+
+  @media screen and (min-width: 1280px) {
+    html.dark .products {
+      background: url("../images/products-bg.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+    .products {
+      background: linear-gradient(
+          rgba(243, 244, 246, 0.65),
+          rgba(243, 244, 246, 0.65)
+        ),
+        url("../images/products-bg.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      height: 900px;
+    }
+  }
+  .section-title {
+    @apply text-2xl md:text-5xl font-MorabbaMedium text-zinc-700 dark:text-white;
+  }
+  .section-subtitle {
+    @apply inline-block text-xl md:text-3xl font-MorabbaLight text-zinc-700 dark:text-white mt-0.5 md:mt-1.5;
+  }
+  .section-link {
+    @apply flex md:gap-x-1 items-center text-base md:text-xl font-Dana text-orange-300 transition-colors md:hover:bg-orange-300/20 md:h-10 pr-3 pl-1 rounded-md tracking-tightest cursor-pointer;
+  }
 }
