@@ -107,4 +107,44 @@
   .section-link {
     @apply flex md:gap-x-1 items-center text-base md:text-xl font-Dana text-orange-300 transition-colors md:hover:bg-orange-300/20 md:h-10 pr-3 pl-1 rounded-md tracking-tightest cursor-pointer;
   }
+  .offer {
+    @apply text-gray-400 relative;
+  }
+  .offer::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    background-color: #ef4444;
+  }
+  .category-banner__item1 {
+    background: linear-gradient(
+        270deg,
+        rgba(0, 0, 0, 0.6) 33.58%,
+        rgba(0, 0, 0, 0.1) 100%
+      ),
+      url("../images/categories/category-right.jpg");
+
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .category-banner__item2 {
+    background: linear-gradient(
+        270deg,
+        rgba(0, 0, 0, 0.6) 33.58%,
+        rgba(0, 0, 0, 0.1) 100%
+      ),
+      url("../images/categories/category-left.jpg");
+
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@layer utilities {
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
 }
